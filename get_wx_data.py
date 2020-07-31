@@ -140,6 +140,7 @@ except:
     logger.error ('Cound not parse wx_description')
 
 wx = {
+    "location": _wx_location,
     "calc_time": calc_time,
     "wind_deg": wind_deg,
     "wind_gust": wind_gust,

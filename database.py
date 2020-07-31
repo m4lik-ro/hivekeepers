@@ -20,9 +20,10 @@ def upload_wx(wx, verbose=False):
     
     mycursor = mydb.cursor()
 
-    sql = "INSERT INTO `weather` (dt, wind_deg, wind_gust, wind_speed, temp, temp_min, temp_max, temp_feels_like, humidity, pressure, clouds, sunrise, sunset, visibility, description) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
+    sql = "INSERT INTO `weather` (dt, location, wind_deg, wind_gust, wind_speed, temp, temp_min, temp_max, temp_feels_like, humidity, pressure, clouds, sunrise, sunset, visibility, description) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
     val = (
         wx['calc_time'],
+        wx['location'],
         wx['wind_deg'],
         wx['wind_gust'],
         wx['wind_speed'],
