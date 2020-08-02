@@ -58,8 +58,8 @@ waveFile.close()
 
 # ftp this to the main server
 import pysftp
-with pysftp.Connection (host='45.76.113.79', username='ben') as sftp:
-    sftp.put (WAVE_OUTPUT_DIR + WAVE_OUTPUT_FILENAME, '/home/ben/ftp/files/' + WAVE_OUTPUT_FILENAME)
+with pysftp.Connection (host='45.76.113.79', username='ftpuser') as sftp:
+    sftp.put (WAVE_OUTPUT_DIR + WAVE_OUTPUT_FILENAME, '/home/ftpuser/ftp/files/' + WAVE_OUTPUT_FILENAME)
 # then delete it
 os.remove(WAVE_OUTPUT_DIR + WAVE_OUTPUT_FILENAME)
 
