@@ -102,7 +102,7 @@ def saveToImage(_xf, _yf, _upper_cutoff, _filename, _title="FFT"):
     # set up graphics screen to plots
     import matplotlib.pyplot as plt
     
-    plt.figure(num=None, figsize=(8, 6), dpi=100)
+    plt.figure(num=None, figsize=(16, 6), dpi=100)
     plt.title (_title)
     plt.ylim(0, 0.1)
     plt.plot(_xf[:_upper_cutoff], _yf[:_upper_cutoff])
