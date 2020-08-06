@@ -83,9 +83,9 @@ def cm2inch(*tupl):
 def saveToImage(freq, s_mag, s_db, _upper_cutoff, _filename, _title="FFT"):
     
     plt.figure(num=None, figsize=(20, 12), dpi=100)
-    plt.title (_title)
+#    plt.title (_title)
     
-    ax1 = plt.subplot(211, xlabel='Frequency [Hz]', ylabel='Amplitude [scaled]', xlim=(0,_upper_cutoff), ylim=(0,1.1))
+    ax1 = plt.subplot(211, xlabel='Frequency [Hz]', ylabel='Amplitude [scaled]', title=_title, xlim=(0,_upper_cutoff), ylim=(0,1.1))
     ax1.plot(freq, s_mag, 'r')
     ax1.grid(True)
     peaks = peakutils.indexes(s_mag, thres=0.1, min_dist=10)    # find the peaks
