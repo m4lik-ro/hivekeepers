@@ -1,4 +1,6 @@
 sandpit/
 wavfiles/
 fftimages/
+fftimages_old/
 *.pyc
+out.mp4
